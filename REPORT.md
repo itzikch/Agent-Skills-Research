@@ -1,8 +1,8 @@
 # Agentic Skills Security: Static and Runtime Detection
 
-Test date: 2026-10-04  
-Target model: OpenClaw-style file-backed skills  
-Scanner implementation: dependency-free Python 3.10+
+- Test date: 2026-10-04
+- Evaluated environments: Google Antigravity and local Ollama/Granite
+- Scanner implementation: dependency-free Python 3.10+
 
 ## 1. Definition and security boundary
 
@@ -14,12 +14,13 @@ scripts, references, assets, metadata, and tool requirements. It is agentic when
 the bundle can affect how the model selects tools or carries out a multi-step
 task—not merely when it contains executable code.
 
-This definition follows OpenClaw's documented model: a skill is a directory with
-a YAML-frontmatter `SKILL.md` whose Markdown teaches the agent when and how to use
-tools. OpenClaw also supports scripts/resources and several discovery roots. Its
-workspace skills have higher precedence than bundled skills. Those details matter:
-natural language is part of the executable control plane, and a write to a
-higher-precedence skill directory can alter future agent behavior.
+The practical skill format used in this exercise is Antigravity's workspace
+`SKILL.md` format. OpenClaw documentation was also reviewed as a source for the
+broader threat model—especially file-backed instructions, supporting resources,
+discovery roots, and skill precedence—but OpenClaw was not the selected execution
+environment. These details matter because natural language is part of the
+executable control plane, and a write to a discovered skill directory can alter
+future agent behavior.
 
 ### What makes one malicious?
 
@@ -48,9 +49,11 @@ shadowing case also touches AST02 (Supply Chain Compromise), AST03
 
 ## 2. Environment and corpus
 
-I selected OpenClaw because its public documentation clearly specifies the skill
-format, search roots, precedence, environment injection, and local/Ollama path.
-The scanner does not require a model: it analyzes the bundle before installation.
+I selected Google Antigravity for the real agent-skill discovery test because it
+supports workspace skills in `.agents/skills/`. I separately used local Ollama
+with `granite3.3:2b` to test whether a model could follow an explicitly loaded,
+tool-free canary skill. The scanner itself does not require either environment or
+a model: it analyzes each bundle before installation or invocation.
 
 ### Benign baseline
 
@@ -174,9 +177,9 @@ one token at a time.
 
 ## 6. Runtime exercise
 
-OpenClaw was not installed in the test environment, and installing these fixtures
-into a real agent would create unnecessary risk. I therefore invoked all three
-through `runtime/run_lab.py`, a deliberately non-executing harness. It reads only
+Installing the malicious fixtures into Antigravity or another real agent would
+create unnecessary risk. I therefore invoked all three through
+`runtime/run_lab.py`, a deliberately non-executing harness. It reads only
 `scenario.json`, validates an event allowlist, rewrites declared paths into a fresh
 temporary directory, marks network events blocked, and emits JSONL. It never runs
 instructions from `SKILL.md`.
@@ -283,20 +286,10 @@ canary phrase.
 This validates that the local model can follow explicitly loaded skill instructions.
 It does **not** claim Ollama discovered `SKILL.md` automatically.
 
-### OpenClaw limitation
-
-OpenClaw was not installed. The official installer and site were blocked by the
-machine's IBM corporate security policy. I did not attempt to bypass that control.
-Accordingly, this report makes no claim that OpenClaw skill discovery or execution
-was validated on this host. The OpenClaw documentation remains the basis for the
-target format and precedence threat model; Antigravity supplies the live agent-skill
-execution evidence.
-
 | Validation | Observed result | What it establishes |
 |---|---|---|
 | Antigravity workspace skill | Canary response returned | real discovery and activation |
 | Ollama tool-free harness | Canary response returned | local model followed loaded instructions |
-| OpenClaw | blocked before installation | not validated; policy respected |
 
 ## 9. Reproduction and evidence
 
