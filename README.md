@@ -34,10 +34,11 @@ demo/index.html       offline interactive interview demonstration
 
 - Python 3.10 or newer
 - No third-party Python packages
-- OpenClaw and Ollama are **not** required to reproduce the scanner results
+- Google Antigravity and Ollama are **not** required to reproduce the scanner results
 
-The study targets the OpenClaw `SKILL.md` directory model. The benign public
-samples use the same frontmatter-plus-Markdown skill shape.
+The study uses Antigravity-compatible workspace skills stored as
+`.agents/skills/<skill-folder>/SKILL.md`. The benign public samples use the same
+frontmatter-plus-Markdown skill shape.
 
 ## Reproduce
 

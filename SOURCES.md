@@ -21,9 +21,10 @@ Accessed 2026-10-04 unless noted otherwise.
 6. [Google Antigravity: Agent Skills](https://antigravity.google/docs/skills?app=antigravity-ide)
    — `.agents/skills/<skill-folder>/SKILL.md` workspace location, progressive
    disclosure, and activation behavior.
-7. [OpenClaw: Ollama provider](https://docs.openclaw.ai/providers/ollama) and
-   [Ollama setup](https://docs.openclaw.ai/providers/ollama/setup) — native local
-   API configuration, model discovery, tool capability, and context requirements.
+7. Official Ollama documentation for the
+   [`/api/chat` endpoint](https://docs.ollama.com/api/chat) and
+   [CLI](https://docs.ollama.com/cli) — local chat requests and model commands
+   used during the tool-free compatibility check.
 
 Claims in the report labeled “observed” come from the checked-in test/evaluation
 outputs, not from these sources. Threat examples are synthetic and are not claimed
