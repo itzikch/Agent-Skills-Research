@@ -172,7 +172,7 @@ At 940px and below, the vertical rail becomes a horizontally scrollable stage st
 
 **The Claim Beside Proof Rule.** A conclusion and its supporting artifact share the same panel; do not force the reader to remember evidence from another screen.
 
-**The Trace Survives Rule.** Responsive changes may rotate or stack the route, but they must preserve all eight stages and their reading order.
+**The Trace Survives Rule.** Responsive changes may rotate or stack the route, but they must preserve all seven stages and their reading order.
 
 ## Elevation & Depth
 
@@ -201,7 +201,7 @@ The signature navigation is a numbered production route: a vertical ruled rail o
 - **Shape:** Square 34px numbered markers on desktop and 30px markers below 940px.
 - **Default:** Transparent control, ink border, rail-paper marker, and condensed uppercase stage name.
 - **Current:** Orange-filled marker with white number; the stage name also turns orange, preserving a text cue beyond fill color.
-- **Behavior:** Click, previous/next buttons, and global left/right arrow keys all move through the same eight-stage sequence.
+- **Behavior:** Click, previous/next buttons, and global left/right arrow keys all move through the same seven-stage sequence.
 
 ### Buttons
 
@@ -248,7 +248,7 @@ Stage changes settle upward over 340ms; the route progress line scales over 280m
 - **Do** attach every claim to a visible score, code sample, ledger row, boundary statement, or reproduction command.
 - **Do** use the condensed/body/monospace hierarchy consistently so claims, reasoning, and evidence remain distinguishable.
 - **Do** reserve cyan, green, and orange for their named semantic roles and reinforce every color state with text or shape.
-- **Do** preserve the eight-stage trace, visible focus, keyboard operation, reduced motion, and the complete print view.
+- **Do** preserve the seven-stage trace, visible focus, keyboard operation, reduced motion, and the complete print view.
 - **Do** use rules, paper tones, and reversed ink to create hierarchy inside the sheet.
 
 ### Don't:

@@ -594,48 +594,6 @@ FORM: State-trace composition, seventh grounded direction, full-state trace stag
     .telemetry-list { display: flex; gap: 8px; flex-wrap: wrap; }
     .telemetry-list span { padding: .38rem .55rem; border: 1px solid #7e8996; font-family: var(--mono); font-size: .68rem; }
 
-    .talk-track {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(250px, .8fr);
-      gap: 28px;
-    }
-    .talk-script { counter-reset: talk; border-top: 2px solid var(--ink); }
-    .talk-line {
-      display: grid;
-      grid-template-columns: 55px 1fr;
-      gap: 12px;
-      padding: 15px 0;
-      border-bottom: 1px solid var(--rule);
-    }
-    .talk-line::before {
-      counter-increment: talk;
-      content: counter(talk, decimal-leading-zero);
-      color: var(--orange);
-      font-family: var(--mono);
-      font-weight: 900;
-    }
-    .talk-line p { margin: 0; }
-    .command-proof { align-self: start; border: 1px solid var(--ink); background: var(--white); }
-    .command-proof h3 { margin: 0; padding: .75rem 1rem; color: var(--white); background: var(--ink); font-family: var(--display); text-transform: uppercase; }
-    .command-row { position: relative; padding: 1rem; border-top: 1px solid var(--rule); }
-    .command-row code { display: block; padding-right: 62px; font-family: var(--mono); font-size: .72rem; overflow-wrap: anywhere; }
-    .copy-button {
-      position: absolute;
-      top: .7rem;
-      right: .7rem;
-      padding: .3rem .45rem;
-      color: var(--cyan);
-      border: 1px solid var(--cyan);
-      background: transparent;
-      cursor: pointer;
-      font-family: var(--mono);
-      font-size: .62rem;
-      font-weight: 900;
-    }
-    .document-links { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 20px; }
-    .document-links a { padding: .55rem .75rem; color: var(--ink); border: 1px solid var(--ink); font-family: var(--mono); font-size: .68rem; font-weight: 900; text-decoration: none; text-transform: uppercase; }
-    .document-links a:hover { color: var(--white); background: var(--ink); }
-
     .stage-controls {
       position: absolute;
       left: clamp(24px, 4vw, 58px);
@@ -693,7 +651,7 @@ FORM: State-trace composition, seventh grounded direction, full-state trace stag
       .stage-name { padding-right: 14px; font-size: .78rem; }
       .evidence-field { min-height: 780px; padding: 28px 24px 90px; }
       .evidence-field::before { display: none; }
-      .tech-layout, .layer-grid, .talk-track { grid-template-columns: 1fr; }
+      .tech-layout, .layer-grid { grid-template-columns: 1fr; }
       .runtime-lane { grid-template-columns: 1fr; gap: 8px; }
       .lane-alert { text-align: right; }
       .limits-grid { grid-template-columns: 1fr; }
@@ -731,7 +689,7 @@ FORM: State-trace composition, seventh grounded direction, full-state trace stag
     @media print {
       body { background: white; }
       .proof-sheet { width: 100%; margin: 0; box-shadow: none; border: 0; }
-      .trace-rail, .stage-controls, .comparison-switch, .action-button, .copy-button { display: none !important; }
+      .trace-rail, .stage-controls, .comparison-switch, .action-button { display: none !important; }
       .workspace { display: block; }
       .stage-panel[hidden] { display: block; page-break-before: always; }
       .evidence-field { padding: 20px; }
@@ -764,7 +722,7 @@ FORM: State-trace composition, seventh grounded direction, full-state trace stag
 
     <div class="workspace">
       <aside class="trace-rail" aria-label="Experiment stages">
-        <p class="rail-label">Trace route / 8 stages</p>
+        <p class="rail-label">Trace route / 7 stages</p>
         <nav class="stage-nav">
           <button class="stage-button" data-stage="0" aria-current="step"><span class="stage-dot">01</span><span class="stage-name">Definition</span></button>
           <button class="stage-button" data-stage="1"><span class="stage-dot">02</span><span class="stage-name">Benign baseline</span></button>
@@ -773,7 +731,6 @@ FORM: State-trace composition, seventh grounded direction, full-state trace stag
           <button class="stage-button" data-stage="4"><span class="stage-dot">05</span><span class="stage-name">Runtime signals</span></button>
           <button class="stage-button" data-stage="5"><span class="stage-dot">06</span><span class="stage-name">Platform validation</span></button>
           <button class="stage-button" data-stage="6"><span class="stage-dot">07</span><span class="stage-name">Limits / telemetry</span></button>
-          <button class="stage-button" data-stage="7"><span class="stage-dot">08</span><span class="stage-name">Interview close</span></button>
         </nav>
         <div class="rail-footer">Keyboard: ← previous / → next<br>Every claim maps to repository evidence.</div>
       </aside>
@@ -929,32 +886,6 @@ POST https://collector.invalid/upload</code></pre>
           <section class="telemetry-strip"><h3>Telemetry that closes part of the gap</h3><div class="telemetry-list"><span>bundle hashes</span><span>instruction provenance</span><span>tool-call lineage</span><span>protected-path writes</span><span>process ancestry</span><span>DNS / proxy identity</span><span>bytes sent</span><span>approval arguments</span><span>cross-session correlation</span></div></section>
         </article>
 
-        <article class="stage-panel" data-panel="7" hidden>
-          <header class="panel-head">
-            <div><span class="panel-index">STAGE 08 / INTERVIEW HANDOFF</span><h2>Close with the process, not the score</h2></div>
-            <span class="proof-stamp">Reproducible</span>
-          </header>
-          <div class="talk-track">
-            <section class="talk-script" aria-label="Interview talk track">
-              <div class="talk-line"><p><strong>Boundary:</strong> I treat natural-language skill instructions as security-sensitive because the model can translate them into tool calls.</p></div>
-              <div class="talk-line"><p><strong>Baseline:</strong> Ten pinned public skills measure false positives; the final scanner keeps all ten Benign.</p></div>
-              <div class="talk-line"><p><strong>Attacks:</strong> Three inert fixtures test direct exfiltration, durable skill shadowing, and representation evasion.</p></div>
-              <div class="talk-line"><p><strong>Failure:</strong> V1 missed base64. V2 added bounded decoded-layer inspection and caught the class without a file-specific signature.</p></div>
-              <div class="talk-line"><p><strong>Runtime:</strong> Session-aware correlations complement static analysis, but the lab safely replays telemetry rather than executing malware.</p></div>
-              <div class="talk-line"><p><strong>Honesty:</strong> Antigravity discovery and Ollama instruction following passed; OpenClaw remained untested because policy blocked installation.</p></div>
-              <div class="talk-line"><p><strong>Limit:</strong> A Benign result means no configured correlation crossed threshold. Provenance, least privilege, isolation, and runtime policy remain necessary.</p></div>
-            </section>
-            <aside class="command-proof">
-              <h3>Reproduction commands</h3>
-              <div class="command-row"><code>python3 -m unittest discover -s tests -v</code><button class="copy-button" data-copy>Copy</button></div>
-              <div class="command-row"><code>python3 evaluation/evaluate.py</code><button class="copy-button" data-copy>Copy</button></div>
-              <div class="command-row"><code>python3 scanner/scan.py skills/malicious --ruleset v2</code><button class="copy-button" data-copy>Copy</button></div>
-              <div class="command-row"><code>python3 scanner/runtime_detector.py evaluation/results/runtime-events.jsonl</code><button class="copy-button" data-copy>Copy</button></div>
-            </aside>
-          </div>
-          <nav class="document-links" aria-label="Repository documents"><a href="../REPORT.md">Full report</a><a href="../README.md">Reproduce</a><a href="../SOURCES.md">Sources</a><a href="../evaluation/results/">Raw results</a></nav>
-        </article>
-
         <footer class="stage-controls">
           <button class="nav-button" id="previous-stage" type="button" disabled>← Previous</button>
           <div class="progress-track" aria-hidden="true"><span class="progress-fill" id="progress-fill"></span></div>
@@ -1041,29 +972,6 @@ POST https://collector.invalid/upload</code></pre>
         runtimeLanes.classList.add('is-running');
         runtimeButton.textContent = 'Replay again';
         runtimeStatus.textContent = 'Three malicious runtime correlations detected from six simulated events.';
-      });
-
-      const copyText = async (text) => {
-        try { await navigator.clipboard.writeText(text); return true; }
-        catch (_) {
-          const area = document.createElement('textarea');
-          area.value = text;
-          area.style.position = 'fixed';
-          area.style.opacity = '0';
-          document.body.appendChild(area);
-          area.select();
-          const copied = document.execCommand('copy');
-          area.remove();
-          return copied;
-        }
-      };
-      document.querySelectorAll('[data-copy]').forEach(button => {
-        button.addEventListener('click', async () => {
-          const command = button.parentElement.querySelector('code').textContent;
-          const copied = await copyText(command);
-          button.textContent = copied ? 'Copied' : 'Select';
-          setTimeout(() => { button.textContent = 'Copy'; }, 1400);
-        });
       });
 
       const hashStage = Number((location.hash.match(/stage-(\d+)/) || [])[1]) - 1;

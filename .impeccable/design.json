@@ -183,7 +183,7 @@
       { "name": "The Three Voices Rule", "body": "Condensed type states the claim, body type explains it, and monospace type proves or operates it.", "section": "typography" },
       { "name": "The One Claim Rule", "body": "Each evidence panel opens with one large headline; supporting labels stay small enough that they cannot compete with it.", "section": "typography" },
       { "name": "The Claim Beside Proof Rule", "body": "A conclusion and its supporting artifact share the same panel; do not force the reader to remember evidence from another screen.", "section": "layout" },
-      { "name": "The Trace Survives Rule", "body": "Responsive changes may rotate or stack the route, but they must preserve all eight stages and their reading order.", "section": "layout" },
+      { "name": "The Trace Survives Rule", "body": "Responsive changes may rotate or stack the route, but they must preserve all seven stages and their reading order.", "section": "layout" },
       { "name": "The One Sheet Shadow Rule", "body": "Never add drop shadows to evidence cards, controls, stamps, or rows; use rules, tone, or reversed ink instead.", "section": "elevation" },
       { "name": "The No Soft Corners Rule", "body": "Rounded cards and pill badges break the proof-sheet metaphor; keep components square, including compact status labels.", "section": "shapes" }
     ],
@@ -191,7 +191,7 @@
       "Do attach every claim to a visible score, code sample, ledger row, boundary statement, or reproduction command.",
       "Do use the condensed/body/monospace hierarchy consistently so claims, reasoning, and evidence remain distinguishable.",
       "Do reserve cyan, green, and orange for their named semantic roles and reinforce every color state with text or shape.",
-      "Do preserve the eight-stage trace, visible focus, keyboard operation, reduced motion, and the complete print view.",
+      "Do preserve the seven-stage trace, visible focus, keyboard operation, reduced motion, and the complete print view.",
       "Do use rules, paper tones, and reversed ink to create hierarchy inside the sheet."
     ],
     "donts": [
