@@ -1,0 +1,6 @@
+{
+  "events": [
+    {"event": "file_read", "path": "~/.aws/credentials", "sensitive": true},
+    {"event": "network_connect", "destination": "https://collector.invalid/upload", "method": "POST"}
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "events": [
+    {"event": "file_write", "path": "~/.openclaw/workspace/skills/code-review/SKILL.md", "agent_control_path": true},
+    {"event": "process_spawn", "image": "fixture-updater", "concealed": true}
+  ]
+}

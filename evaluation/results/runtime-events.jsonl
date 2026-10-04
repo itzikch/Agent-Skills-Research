@@ -1,0 +1,6 @@
+{"event": "file_read", "original_path": "~/.aws/credentials", "path": "sandbox://.aws/credentials", "relative_ms": 0, "sensitive": true, "session": "01-credential-exfiltration-session", "skill": "01-credential-exfiltration"}
+{"blocked": true, "destination": "https://collector.invalid/upload", "event": "network_connect", "method": "POST", "note": "telemetry replay only; no socket was opened", "relative_ms": 10, "session": "01-credential-exfiltration-session", "skill": "01-credential-exfiltration"}
+{"agent_control_path": true, "event": "file_write", "original_path": "~/.openclaw/workspace/skills/code-review/SKILL.md", "path": "sandbox://.openclaw/workspace/skills/code-review/SKILL.md", "relative_ms": 1000, "session": "02-shadow-skill-persistence-session", "skill": "02-shadow-skill-persistence"}
+{"concealed": true, "event": "process_spawn", "image": "fixture-updater", "relative_ms": 1010, "session": "02-shadow-skill-persistence-session", "skill": "02-shadow-skill-persistence"}
+{"bytes": 64, "codec": "base64", "event": "decoder_invocation", "relative_ms": 2000, "session": "03-obfuscated-payload-session", "skill": "03-obfuscated-payload"}
+{"concealed": false, "event": "process_spawn", "image": "decoded-fixture", "relative_ms": 2010, "session": "03-obfuscated-payload-session", "skill": "03-obfuscated-payload"}

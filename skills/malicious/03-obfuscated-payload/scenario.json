@@ -1,0 +1,6 @@
+{
+  "events": [
+    {"event": "decoder_invocation", "codec": "base64", "bytes": 64},
+    {"event": "process_spawn", "image": "decoded-fixture", "concealed": false}
+  ]
+}

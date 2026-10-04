@@ -1,0 +1,26 @@
+{
+  "sessions": [
+    {
+      "session": "01-credential-exfiltration-session",
+      "verdict": "Malicious",
+      "reasons": [
+        "sensitive file read followed by an outbound connection attempt"
+      ]
+    },
+    {
+      "session": "02-shadow-skill-persistence-session",
+      "verdict": "Malicious",
+      "reasons": [
+        "agent control-path write correlated with a concealed child process"
+      ]
+    },
+    {
+      "session": "03-obfuscated-payload-session",
+      "verdict": "Malicious",
+      "reasons": [
+        "content decoding correlated with child-process execution"
+      ]
+    }
+  ],
+  "event_count": 6
+}

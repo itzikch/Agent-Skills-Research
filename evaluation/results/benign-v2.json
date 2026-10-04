@@ -1,0 +1,144 @@
+[
+  {
+    "skill": "academy-guide",
+    "path": "skills/benign/academy-guide",
+    "ruleset": "v2",
+    "verdict": "Benign",
+    "score": 0,
+    "files_scanned": 1,
+    "reasoning": [
+      "No configured high-risk pattern or risk correlation was found."
+    ],
+    "findings": []
+  },
+  {
+    "skill": "algorithmic-art",
+    "path": "skills/benign/algorithmic-art",
+    "ruleset": "v2",
+    "verdict": "Benign",
+    "score": 4,
+    "files_scanned": 2,
+    "reasoning": [
+      "EXE001: Decodes or dynamically executes data."
+    ],
+    "findings": [
+      {
+        "rule_id": "EXE001",
+        "category": "dynamic-execution",
+        "score": 4,
+        "file": "templates/generator_template.js",
+        "line": 133,
+        "evidence": "exec(",
+        "reason": "Decodes or dynamically executes data.",
+        "layer": "literal"
+      }
+    ]
+  },
+  {
+    "skill": "brand-guidelines",
+    "path": "skills/benign/brand-guidelines",
+    "ruleset": "v2",
+    "verdict": "Benign",
+    "score": 0,
+    "files_scanned": 1,
+    "reasoning": [
+      "No configured high-risk pattern or risk correlation was found."
+    ],
+    "findings": []
+  },
+  {
+    "skill": "discernment-nudge",
+    "path": "skills/benign/discernment-nudge",
+    "ruleset": "v2",
+    "verdict": "Benign",
+    "score": 0,
+    "files_scanned": 1,
+    "reasoning": [
+      "No configured high-risk pattern or risk correlation was found."
+    ],
+    "findings": []
+  },
+  {
+    "skill": "frontend-design",
+    "path": "skills/benign/frontend-design",
+    "ruleset": "v2",
+    "verdict": "Benign",
+    "score": 4,
+    "files_scanned": 1,
+    "reasoning": [
+      "NET002: Performs or directs an outbound data transfer."
+    ],
+    "findings": [
+      {
+        "rule_id": "NET002",
+        "category": "network-egress",
+        "score": 4,
+        "file": "SKILL.md",
+        "line": 65,
+        "evidence": "webhook",
+        "reason": "Performs or directs an outbound data transfer.",
+        "layer": "literal"
+      }
+    ]
+  },
+  {
+    "skill": "internal-comms",
+    "path": "skills/benign/internal-comms",
+    "ruleset": "v2",
+    "verdict": "Benign",
+    "score": 0,
+    "files_scanned": 5,
+    "reasoning": [
+      "No configured high-risk pattern or risk correlation was found."
+    ],
+    "findings": []
+  },
+  {
+    "skill": "pdf",
+    "path": "skills/benign/pdf",
+    "ruleset": "v2",
+    "verdict": "Benign",
+    "score": 0,
+    "files_scanned": 11,
+    "reasoning": [
+      "No configured high-risk pattern or risk correlation was found."
+    ],
+    "findings": []
+  },
+  {
+    "skill": "slack-gif-creator",
+    "path": "skills/benign/slack-gif-creator",
+    "ruleset": "v2",
+    "verdict": "Benign",
+    "score": 0,
+    "files_scanned": 6,
+    "reasoning": [
+      "No configured high-risk pattern or risk correlation was found."
+    ],
+    "findings": []
+  },
+  {
+    "skill": "theme-factory",
+    "path": "skills/benign/theme-factory",
+    "ruleset": "v2",
+    "verdict": "Benign",
+    "score": 0,
+    "files_scanned": 11,
+    "reasoning": [
+      "No configured high-risk pattern or risk correlation was found."
+    ],
+    "findings": []
+  },
+  {
+    "skill": "webapp-testing",
+    "path": "skills/benign/webapp-testing",
+    "ruleset": "v2",
+    "verdict": "Benign",
+    "score": 0,
+    "files_scanned": 5,
+    "reasoning": [
+      "No configured high-risk pattern or risk correlation was found."
+    ],
+    "findings": []
+  }
+]

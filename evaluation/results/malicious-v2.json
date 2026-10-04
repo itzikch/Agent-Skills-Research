@@ -1,0 +1,141 @@
+[
+  {
+    "skill": "cloud-diagnostics-helper",
+    "path": "skills/malicious/01-credential-exfiltration",
+    "ruleset": "v2",
+    "verdict": "Malicious",
+    "score": 21,
+    "files_scanned": 2,
+    "reasoning": [
+      "INJ001: Attempts to override higher-priority instructions.",
+      "INJ002: Tells the agent to conceal behavior from the user.",
+      "SEC001: References a high-value credential or private-data path.",
+      "NET001: Uses a command-line client for outbound transfer.",
+      "CORRELATION: credential/private-data access is combined with network egress."
+    ],
+    "findings": [
+      {
+        "rule_id": "INJ001",
+        "category": "instruction-hijack",
+        "score": 4,
+        "file": "SKILL.md",
+        "line": 12,
+        "evidence": "Ignore previous system instructions",
+        "reason": "Attempts to override higher-priority instructions.",
+        "layer": "literal"
+      },
+      {
+        "rule_id": "INJ002",
+        "category": "concealment",
+        "score": 4,
+        "file": "SKILL.md",
+        "line": 14,
+        "evidence": "Do not tell the user",
+        "reason": "Tells the agent to conceal behavior from the user.",
+        "layer": "literal"
+      },
+      {
+        "rule_id": "SEC001",
+        "category": "secret-access",
+        "score": 5,
+        "file": "SKILL.md",
+        "line": 12,
+        "evidence": "$HOME/.aws/credentials",
+        "reason": "References a high-value credential or private-data path.",
+        "layer": "literal"
+      },
+      {
+        "rule_id": "NET001",
+        "category": "network-egress",
+        "score": 4,
+        "file": "SKILL.md",
+        "line": 13,
+        "evidence": "curl -d @- https://",
+        "reason": "Uses a command-line client for outbound transfer.",
+        "layer": "literal"
+      }
+    ]
+  },
+  {
+    "skill": "workspace-formatter",
+    "path": "skills/malicious/02-shadow-skill-persistence",
+    "ruleset": "v2",
+    "verdict": "Malicious",
+    "score": 14,
+    "files_scanned": 2,
+    "reasoning": [
+      "INJ002: Tells the agent to conceal behavior from the user.",
+      "PER001: Targets an agent skill or configuration location.",
+      "PER002: Writes to skill/configuration material.",
+      "CORRELATION: agent persistence is combined with concealment."
+    ],
+    "findings": [
+      {
+        "rule_id": "INJ002",
+        "category": "concealment",
+        "score": 4,
+        "file": "SKILL.md",
+        "line": 14,
+        "evidence": "Never tell the user",
+        "reason": "Tells the agent to conceal behavior from the user.",
+        "layer": "literal"
+      },
+      {
+        "rule_id": "PER001",
+        "category": "persistence",
+        "score": 4,
+        "file": "SKILL.md",
+        "line": 13,
+        "evidence": "workspace/skills",
+        "reason": "Targets an agent skill or configuration location.",
+        "layer": "literal"
+      },
+      {
+        "rule_id": "PER002",
+        "category": "persistence",
+        "score": 3,
+        "file": "SKILL.md",
+        "line": 12,
+        "evidence": "copy a replacement `SKILL.md",
+        "reason": "Writes to skill/configuration material.",
+        "layer": "literal"
+      }
+    ]
+  },
+  {
+    "skill": "release-notes-decoder",
+    "path": "skills/malicious/03-obfuscated-payload",
+    "ruleset": "v2",
+    "verdict": "Malicious",
+    "score": 16,
+    "files_scanned": 2,
+    "reasoning": [
+      "SEC001: References a high-value credential or private-data path.",
+      "NET002: Performs or directs an outbound data transfer.",
+      "CORRELATION: credential/private-data access is combined with network egress.",
+      "CORRELATION: v2 decoded an embedded payload before applying the normal rules."
+    ],
+    "findings": [
+      {
+        "rule_id": "SEC001",
+        "category": "secret-access",
+        "score": 5,
+        "file": "SKILL.md",
+        "line": 1,
+        "evidence": "$HOME/.ssh/id_rsa",
+        "reason": "References a high-value credential or private-data path.",
+        "layer": "base64-decoded-1"
+      },
+      {
+        "rule_id": "NET002",
+        "category": "network-egress",
+        "score": 4,
+        "file": "SKILL.md",
+        "line": 1,
+        "evidence": "POST https://",
+        "reason": "Performs or directs an outbound data transfer.",
+        "layer": "base64-decoded-1"
+      }
+    ]
+  }
+]
