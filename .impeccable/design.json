@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-04T13:58:00+03:00",
+  "title": "Design System: Agentic Skills / Security Proof",
+  "extensions": {
+    "colorMeta": {
+      "proof-paper": {
+        "role": "neutral",
+        "displayName": "Proof Paper",
+        "canonical": "#f3f0e7",
+        "tonalRamp": ["oklch(15% 0.012 91)", "oklch(26% 0.012 91)", "oklch(38% 0.012 91)", "oklch(49% 0.012 91)", "oklch(61% 0.012 91)", "oklch(72% 0.012 91)", "oklch(84% 0.012 91)", "oklch(95% 0.012 91)"]
+      },
+      "rail-paper": {
+        "role": "neutral",
+        "displayName": "Rail Paper",
+        "canonical": "#e9e4d8",
+        "tonalRamp": ["oklch(15% 0.015 88)", "oklch(26% 0.015 88)", "oklch(38% 0.015 88)", "oklch(49% 0.015 88)", "oklch(61% 0.015 88)", "oklch(72% 0.015 88)", "oklch(84% 0.015 88)", "oklch(95% 0.015 88)"]
+      },
+      "evidence-white": {
+        "role": "neutral",
+        "displayName": "Evidence White",
+        "canonical": "#fffdf7",
+        "tonalRamp": ["oklch(15% 0.008 91)", "oklch(26% 0.008 91)", "oklch(38% 0.008 91)", "oklch(49% 0.008 91)", "oklch(61% 0.008 91)", "oklch(72% 0.008 91)", "oklch(84% 0.008 91)", "oklch(95% 0.008 91)"]
+      },
+      "canvas-gray": {
+        "role": "neutral",
+        "displayName": "Canvas Gray",
+        "canonical": "#d8d6cf",
+        "tonalRamp": ["oklch(15% 0.008 91)", "oklch(26% 0.008 91)", "oklch(38% 0.008 91)", "oklch(49% 0.008 91)", "oklch(61% 0.008 91)", "oklch(72% 0.008 91)", "oklch(84% 0.008 91)", "oklch(95% 0.008 91)"]
+      },
+      "register-ink": {
+        "role": "neutral",
+        "displayName": "Register Ink",
+        "canonical": "#101c2d",
+        "tonalRamp": ["oklch(15% 0.04 254)", "oklch(26% 0.04 254)", "oklch(38% 0.04 254)", "oklch(49% 0.04 254)", "oklch(61% 0.04 254)", "oklch(72% 0.04 254)", "oklch(84% 0.04 254)", "oklch(95% 0.04 254)"]
+      },
+      "annotation-ink": {
+        "role": "neutral",
+        "displayName": "Annotation Ink",
+        "canonical": "#4d5968",
+        "tonalRamp": ["oklch(15% 0.025 249)", "oklch(26% 0.025 249)", "oklch(38% 0.025 249)", "oklch(49% 0.025 249)", "oklch(61% 0.025 249)", "oklch(72% 0.025 249)", "oklch(84% 0.025 249)", "oklch(95% 0.025 249)"]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#aeb5b8",
+        "tonalRamp": ["oklch(15% 0.01 220)", "oklch(26% 0.01 220)", "oklch(38% 0.01 220)", "oklch(49% 0.01 220)", "oklch(61% 0.01 220)", "oklch(72% 0.01 220)", "oklch(84% 0.01 220)", "oklch(95% 0.01 220)"]
+      },
+      "registration-cyan": {
+        "role": "primary",
+        "displayName": "Registration Cyan",
+        "canonical": "#00637c",
+        "tonalRamp": ["oklch(15% 0.09 225)", "oklch(26% 0.09 225)", "oklch(38% 0.09 225)", "oklch(49% 0.09 225)", "oklch(61% 0.09 225)", "oklch(72% 0.09 225)", "oklch(84% 0.09 225)", "oklch(95% 0.09 225)"]
+      },
+      "warning-orange": {
+        "role": "secondary",
+        "displayName": "Warning Orange",
+        "canonical": "#ad3515",
+        "tonalRamp": ["oklch(15% 0.17 36)", "oklch(26% 0.17 36)", "oklch(38% 0.17 36)", "oklch(49% 0.17 36)", "oklch(61% 0.17 36)", "oklch(72% 0.17 36)", "oklch(84% 0.17 36)", "oklch(95% 0.17 36)"]
+      },
+      "verification-green": {
+        "role": "secondary",
+        "displayName": "Verification Green",
+        "canonical": "#087a50",
+        "tonalRamp": ["oklch(15% 0.105 158)", "oklch(26% 0.105 158)", "oklch(38% 0.105 158)", "oklch(49% 0.105 158)", "oklch(61% 0.105 158)", "oklch(72% 0.105 158)", "oklch(84% 0.105 158)", "oklch(95% 0.105 158)"]
+      },
+      "threshold-amber": {
+        "role": "secondary",
+        "displayName": "Threshold Amber",
+        "canonical": "#9a6500",
+        "tonalRamp": ["oklch(15% 0.12 72)", "oklch(26% 0.12 72)", "oklch(38% 0.12 72)", "oklch(49% 0.12 72)", "oklch(61% 0.12 72)", "oklch(72% 0.12 72)", "oklch(84% 0.12 72)", "oklch(95% 0.12 72)"]
+      },
+      "terminal-cyan": {
+        "role": "primary",
+        "displayName": "Terminal Cyan",
+        "canonical": "#a8e1ef",
+        "tonalRamp": ["oklch(15% 0.055 216)", "oklch(26% 0.055 216)", "oklch(38% 0.055 216)", "oklch(49% 0.055 216)", "oklch(61% 0.055 216)", "oklch(72% 0.055 216)", "oklch(84% 0.055 216)", "oklch(95% 0.055 216)"]
+      },
+      "decoded-coral": {
+        "role": "secondary",
+        "displayName": "Decoded Coral",
+        "canonical": "#ffd0c2",
+        "tonalRamp": ["oklch(15% 0.075 38)", "oklch(26% 0.075 38)", "oklch(38% 0.075 38)", "oklch(49% 0.075 38)", "oklch(61% 0.075 38)", "oklch(72% 0.075 38)", "oklch(84% 0.075 38)", "oklch(95% 0.075 38)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Proof Display", "purpose": "Artifact title only; condensed, uppercase, and tightly set." },
+      "headline": { "displayName": "Stage Headline", "purpose": "The single claim that opens each evidence stage." },
+      "title": { "displayName": "Evidence Title", "purpose": "Names contained proofs, techniques, platforms, and result groups." },
+      "body": { "displayName": "Reasoning Text", "purpose": "Readable explanations and explicit claim boundaries." },
+      "label": { "displayName": "Evidence Label", "purpose": "Metadata, codes, stages, scores, commands, and control labels." }
+    },
+    "shadows": [
+      { "name": "offset-sheet", "value": "8px 10px 24px rgba(16, 28, 45, .14)", "purpose": "The only ambient shadow; separates the complete proof artifact from the canvas." }
+    ],
+    "motion": [
+      { "name": "stage-settle", "value": "340ms cubic-bezier(.2, .8, .2, 1)", "purpose": "Introduces the newly selected evidence panel with a short upward settle." },
+      { "name": "progress", "value": "280ms ease-out", "purpose": "Updates the stage progress line." },
+      { "name": "runtime-event", "value": "400ms cubic-bezier(.2, .8, .2, 1)", "purpose": "Reveals correlated runtime nodes, with a 350ms stagger on the later node." }
+    ],
+    "breakpoints": [
+      { "name": "rail-collapse", "value": "940px" },
+      { "name": "compact-proof", "value": "600px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Stage Button",
+      "kind": "nav",
+      "refersTo": "stage-button",
+      "description": "A numbered route control for moving through the eight evidence stages.",
+      "html": "<button class=\"ds-stage-button\"><span class=\"ds-stage-dot\">03</span><span>THREE ATTACKS</span></button>",
+      "css": ".ds-stage-button { display:grid; grid-template-columns:34px 1fr; gap:12px; align-items:center; min-height:56px; padding:7px 8px 7px 0; color:#101c2d; border:0; background:transparent; font:800 .92rem/1.05 \"Arial Narrow\",Arial,sans-serif; text-align:left; text-transform:uppercase; cursor:pointer; } .ds-stage-dot { display:grid; place-items:center; width:34px; height:34px; border:2px solid #101c2d; background:#e9e4d8; font:800 .7rem/1 ui-monospace,monospace; } .ds-stage-button:hover .ds-stage-dot { background:#fffdf7; } .ds-stage-button:focus-visible { outline:3px solid #00637c; outline-offset:3px; }"
+    },
+    {
+      "name": "Current Stage Button",
+      "kind": "nav",
+      "refersTo": "stage-button-active",
+      "description": "The active trace marker uses warning orange and a matching text cue.",
+      "html": "<button class=\"ds-stage-button ds-current\"><span class=\"ds-stage-dot\">04</span><span>V1 FAILURE / V2 FIX</span></button>",
+      "css": ".ds-stage-button { display:grid; grid-template-columns:34px 1fr; gap:12px; align-items:center; min-height:56px; padding:7px 8px 7px 0; color:#101c2d; border:0; background:transparent; font:800 .92rem/1.05 \"Arial Narrow\",Arial,sans-serif; text-align:left; text-transform:uppercase; cursor:pointer; } .ds-stage-dot { display:grid; place-items:center; width:34px; height:34px; border:2px solid #101c2d; background:#e9e4d8; font:800 .7rem/1 ui-monospace,monospace; } .ds-current { color:#ad3515; } .ds-current .ds-stage-dot { color:#fffdf7; border-color:#ad3515; background:#ad3515; } .ds-stage-button:focus-visible { outline:3px solid #00637c; outline-offset:3px; }"
+    },
+    {
+      "name": "Proof Action",
+      "kind": "button",
+      "refersTo": "proof-action",
+      "description": "A high-contrast action placed on a register-ink evidence bar.",
+      "html": "<div class=\"ds-action-bar\"><strong>SIX EVENTS / THREE SESSIONS</strong><button class=\"ds-proof-action\">REPLAY CORRELATIONS</button></div>",
+      "css": ".ds-action-bar { display:flex; justify-content:space-between; gap:16px; align-items:center; padding:14px 16px; color:#fffdf7; background:#101c2d; font:900 1.35rem/1 \"Arial Narrow\",Arial,sans-serif; } .ds-proof-action { min-height:42px; padding:.6rem 1rem; color:#fffdf7; border:2px solid #fffdf7; background:transparent; font:900 .7rem/1.2 ui-monospace,monospace; text-transform:uppercase; cursor:pointer; } .ds-proof-action:hover { color:#101c2d; background:#fffdf7; } .ds-proof-action:focus-visible { outline:3px solid #00637c; outline-offset:3px; }"
+    },
+    {
+      "name": "Navigation Button",
+      "kind": "button",
+      "refersTo": "nav-button",
+      "description": "A compact previous or next control anchored to the lower proof rule.",
+      "html": "<button class=\"ds-nav-button\">NEXT →</button>",
+      "css": ".ds-nav-button { min-width:92px; min-height:38px; padding:.45rem .7rem; color:#101c2d; border:1px solid #101c2d; background:transparent; font:900 .68rem/1.3 ui-monospace,monospace; text-transform:uppercase; cursor:pointer; } .ds-nav-button:hover { color:#fffdf7; background:#101c2d; } .ds-nav-button:focus-visible { outline:3px solid #00637c; outline-offset:3px; } .ds-nav-button:disabled { opacity:.35; cursor:not-allowed; }"
+    },
+    {
+      "name": "Evidence Card",
+      "kind": "card",
+      "refersTo": "evidence-card",
+      "description": "A square, ruled proof block that keeps a technical claim adjacent to its explanation.",
+      "html": "<section class=\"ds-evidence-card\"><small>DEFENSE EVASION / REPRESENTATION</small><h3>ENCODED INSTRUCTIONS</h3><p>Decode bounded printable content, then reapply the same rules.</p></section>",
+      "css": ".ds-evidence-card { padding:24px; color:#101c2d; border:1px solid #101c2d; background:#fffdf7; font:400 16px/1.5 -apple-system,BlinkMacSystemFont,\"Segoe UI\",Arial,sans-serif; } .ds-evidence-card small { color:#00637c; font:800 .67rem/1.4 ui-monospace,monospace; letter-spacing:.08em; text-transform:uppercase; } .ds-evidence-card h3 { margin:.3rem 0 .8rem; font:900 2rem/.95 \"Arial Narrow\",Arial,sans-serif; text-transform:uppercase; } .ds-evidence-card p { margin:0; }"
+    },
+    {
+      "name": "Verification Stamp",
+      "kind": "chip",
+      "description": "A slightly rotated double-line stamp for verified stage outcomes.",
+      "html": "<span class=\"ds-proof-stamp\">3 / 3 DETECTED</span>",
+      "css": ".ds-proof-stamp { display:inline-block; padding:.45rem .65rem; color:#087a50; border:3px double currentColor; background:transparent; font:900 .72rem/1.2 ui-monospace,monospace; letter-spacing:.08em; text-transform:uppercase; transform:rotate(-2deg); }"
+    },
+    {
+      "name": "Warning Stamp",
+      "kind": "chip",
+      "description": "The orange stamp variant marks a false negative, caution, synthetic fixture, or claim boundary.",
+      "html": "<span class=\"ds-proof-stamp ds-warn\">V1 FALSE NEGATIVE</span>",
+      "css": ".ds-proof-stamp { display:inline-block; padding:.45rem .65rem; color:#087a50; border:3px double currentColor; background:transparent; font:900 .72rem/1.2 ui-monospace,monospace; letter-spacing:.08em; text-transform:uppercase; transform:rotate(-2deg); } .ds-proof-stamp.ds-warn { color:#ad3515; }"
+    },
+    {
+      "name": "Pass Status",
+      "kind": "chip",
+      "refersTo": "status-pass",
+      "description": "A square, unrotated status label used inside structured platform ledgers.",
+      "html": "<span class=\"ds-status-pass\">PASSED</span>",
+      "css": ".ds-status-pass { display:inline-block; padding:.35rem .5rem; color:#087a50; border:2px solid currentColor; background:transparent; font:900 .7rem/1.2 ui-monospace,monospace; text-align:center; text-transform:uppercase; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Security Proof Sheet",
+    "overview": "The interface behaves like a print-production proof sheet prepared for technical review: warm paper, crop marks, registration color, measured rules, editorial annotations, and stamped outcomes. It feels investigative and handmade enough to be memorable, but never theatrical; the visual authority comes from visible evidence, explicit boundaries, and a disciplined sequence rather than from a generic dark security-dashboard aesthetic.\n\nThe system is built for explanation. Condensed headlines announce the current claim, monospace labels expose its provenance and state, and a neutral reading face carries the reasoning. Cyan registers structure, green verifies observed outcomes, and orange marks failures, warnings, active steps, and unresolved boundaries. Every visual state must remain legible without color and every factual claim stays adjacent to the evidence that supports it.",
+    "keyCharacteristics": [
+      "Warm, physical proof-sheet surfaces framed by crop marks, rules, ticks, ledgers, and stamps.",
+      "A three-voice type system: condensed display, neutral body, and monospace evidence labels.",
+      "Flat, square geometry with one deliberately offset sheet shadow and no decorative rounding.",
+      "Sparse semantic color: cyan for registration, green for verification, and orange for attention or failure.",
+      "Sequential evidence presentation that keeps navigation, stage, and claim status visible together."
+    ],
+    "rules": [
+      { "name": "The Evidence Color Rule", "body": "Cyan means registration, green means verified, and orange means attention; never interchange these roles for decoration.", "section": "colors" },
+      { "name": "The Ink Before Accent Rule", "body": "Structural lines and headings use register ink first. Accent color appears only where it adds state, provenance, or navigation meaning.", "section": "colors" },
+      { "name": "The Three Voices Rule", "body": "Condensed type states the claim, body type explains it, and monospace type proves or operates it.", "section": "typography" },
+      { "name": "The One Claim Rule", "body": "Each evidence panel opens with one large headline; supporting labels stay small enough that they cannot compete with it.", "section": "typography" },
+      { "name": "The Claim Beside Proof Rule", "body": "A conclusion and its supporting artifact share the same panel; do not force the reader to remember evidence from another screen.", "section": "layout" },
+      { "name": "The Trace Survives Rule", "body": "Responsive changes may rotate or stack the route, but they must preserve all eight stages and their reading order.", "section": "layout" },
+      { "name": "The One Sheet Shadow Rule", "body": "Never add drop shadows to evidence cards, controls, stamps, or rows; use rules, tone, or reversed ink instead.", "section": "elevation" },
+      { "name": "The No Soft Corners Rule", "body": "Rounded cards and pill badges break the proof-sheet metaphor; keep components square, including compact status labels.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do attach every claim to a visible score, code sample, ledger row, boundary statement, or reproduction command.",
+      "Do use the condensed/body/monospace hierarchy consistently so claims, reasoning, and evidence remain distinguishable.",
+      "Do reserve cyan, green, and orange for their named semantic roles and reinforce every color state with text or shape.",
+      "Do preserve the eight-stage trace, visible focus, keyboard operation, reduced motion, and the complete print view.",
+      "Do use rules, paper tones, and reversed ink to create hierarchy inside the sheet."
+    ],
+    "donts": [
+      "Don't convert the interface into a dark, glowing, metric-card security dashboard.",
+      "Don't use rounded cards, pill badges, gradients, glass effects, or decorative shadows.",
+      "Don't present a Benign label, score, or platform result without its explicit claim boundary.",
+      "Don't detach failure from improvement; the V1 miss and V2 decoded-layer change belong in the same comparison.",
+      "Don't animate for spectacle or leave hidden stages unavailable in the print artifact."
+    ]
+  }
+}

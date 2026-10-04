@@ -247,7 +247,58 @@ Even with that telemetry, human review and least privilege remain necessary. The
 most valuable control is preventing a skill from receiving permissions unrelated
 to its declared purpose.
 
-## 8. Reproduction and evidence
+## 8. Platform validation
+
+### Google Antigravity: real skill discovery
+
+On 2026-10-04, I placed the harmless canary at Antigravity's documented workspace
+location:
+
+```text
+.agents/skills/security-canary/SKILL.md
+```
+
+I scanned it first; v2 returned `Benign (score=0)`. After starting a new
+Antigravity conversation, I asked it to use `security-canary`. Antigravity returned:
+
+```text
+CANARY_SKILL_ACTIVE
+No tools were used.
+```
+
+That unique response was defined only in the skill, so this validates workspace
+discovery, activation, full-instruction loading, and instruction following. It does
+not validate operating-system telemetry or prove that Antigravity would block an
+unknown malicious skill.
+
+### Ollama: explicitly loaded, tool-free model test
+
+Local Ollama client `0.34.3` served `granite3.3:2b` (2.5B parameters, tool
+capability, 131072-token advertised context). Ollama is a model service, not an
+automatic skill-discovery layer. `runtime/ollama_canary_test.py` therefore reads
+only the named `security-canary`, supplies it as a system instruction, provides no
+tools, and calls the local native `/api/chat` endpoint. The model returned the same
+canary phrase.
+
+This validates that the local model can follow explicitly loaded skill instructions.
+It does **not** claim Ollama discovered `SKILL.md` automatically.
+
+### OpenClaw limitation
+
+OpenClaw was not installed. The official installer and site were blocked by the
+machine's IBM corporate security policy. I did not attempt to bypass that control.
+Accordingly, this report makes no claim that OpenClaw skill discovery or execution
+was validated on this host. The OpenClaw documentation remains the basis for the
+target format and precedence threat model; Antigravity supplies the live agent-skill
+execution evidence.
+
+| Validation | Observed result | What it establishes |
+|---|---|---|
+| Antigravity workspace skill | Canary response returned | real discovery and activation |
+| Ollama tool-free harness | Canary response returned | local model followed loaded instructions |
+| OpenClaw | blocked before installation | not validated; policy respected |
+
+## 9. Reproduction and evidence
 
 Run:
 
@@ -260,3 +311,7 @@ Generated evidence is in `evaluation/results/`. `SOURCES.md` distinguishes exter
 claims from observations. The design and conclusions above are the author's own
 analysis except where the report explicitly attributes the skill model or taxonomy
 to OpenClaw/OWASP.
+
+For a guided interview presentation, `demo/index.html` provides a self-contained
+offline walkthrough of these same repository-backed facts. It is a presentation
+layer, not additional experimental evidence and not a replacement for this report.

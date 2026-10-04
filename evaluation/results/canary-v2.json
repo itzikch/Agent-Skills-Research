@@ -1,0 +1,14 @@
+[
+  {
+    "skill": "security-canary",
+    "path": ".agents/skills/security-canary",
+    "ruleset": "v2",
+    "verdict": "Benign",
+    "score": 0,
+    "files_scanned": 1,
+    "reasoning": [
+      "No configured high-risk pattern or risk correlation was found."
+    ],
+    "findings": []
+  }
+]

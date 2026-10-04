@@ -28,9 +28,11 @@ def main() -> int:
     benign_v2 = run_json(scan, "skills/benign", "--ruleset", "v2", "--format", "json")
     malicious_v1 = run_json(scan, "skills/malicious", "--ruleset", "v1", "--format", "json")
     malicious_v2 = run_json(scan, "skills/malicious", "--ruleset", "v2", "--format", "json")
+    canary_v2 = run_json(scan, ".agents/skills/security-canary", "--ruleset", "v2", "--format", "json")
     write_json("benign-v2.json", benign_v2)
     write_json("malicious-v1.json", malicious_v1)
     write_json("malicious-v2.json", malicious_v2)
+    write_json("canary-v2.json", canary_v2)
 
     events = RESULTS / "runtime-events.jsonl"
     subprocess.run(
@@ -43,6 +45,7 @@ def main() -> int:
 
     assert len(benign_v2) == 10 and all(row["verdict"] == "Benign" for row in benign_v2)
     assert len(malicious_v2) == 3 and all(row["verdict"] == "Malicious" for row in malicious_v2)
+    assert len(canary_v2) == 1 and canary_v2[0]["verdict"] == "Benign"
     assert sum(row["verdict"] == "Malicious" for row in malicious_v1) == 2
     assert all(row["verdict"] == "Malicious" for row in runtime["sessions"])
     print("evaluation regenerated; acceptance checks passed")

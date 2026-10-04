@@ -23,6 +23,12 @@ def scan(path: Path, ruleset: str = "v2") -> list[dict]:
 
 
 class ScannerTests(unittest.TestCase):
+    def test_antigravity_canary_is_benign(self):
+        results = scan(ROOT / ".agents" / "skills" / "security-canary")
+        self.assertEqual(1, len(results))
+        self.assertEqual("Benign", results[0]["verdict"])
+        self.assertEqual(0, results[0]["score"])
+
     def test_all_ten_benign_are_clear(self):
         results = scan(ROOT / "skills" / "benign")
         self.assertEqual(10, len(results))

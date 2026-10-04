@@ -18,6 +18,12 @@ Accessed 2026-10-04 unless noted otherwise.
    [`re`](https://docs.python.org/3.10/library/re.html), and
    [`subprocess`](https://docs.python.org/3.10/library/subprocess.html) — APIs used
    by the scanner and contained replay harness.
+6. [Google Antigravity: Agent Skills](https://antigravity.google/docs/skills?app=antigravity-ide)
+   — `.agents/skills/<skill-folder>/SKILL.md` workspace location, progressive
+   disclosure, and activation behavior.
+7. [OpenClaw: Ollama provider](https://docs.openclaw.ai/providers/ollama) and
+   [Ollama setup](https://docs.openclaw.ai/providers/ollama/setup) — native local
+   API configuration, model discovery, tool capability, and context requirements.
 
 Claims in the report labeled “observed” come from the checked-in test/evaluation
 outputs, not from these sources. Threat examples are synthetic and are not claimed
