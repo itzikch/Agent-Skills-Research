@@ -286,11 +286,6 @@ canary phrase.
 This validates that the local model can follow explicitly loaded skill instructions.
 It does **not** claim Ollama discovered `SKILL.md` automatically.
 
-| Validation | Observed result | What it establishes |
-|---|---|---|
-| Antigravity workspace skill | Canary response returned | real discovery and activation |
-| Ollama tool-free harness | Canary response returned | local model followed loaded instructions |
-
 ## 9. Reproduction and evidence
 
 Run:
